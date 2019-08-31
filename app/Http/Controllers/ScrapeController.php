@@ -26,52 +26,107 @@ class ScrapeController extends Controller
         return "index for scraping!";
     }
 
-    public function store(ScrapeStoreRequest $request)
+    public function store(Request $request)
     {
         $input = $request->input();
 
-        $url  = $input['url'];
-        $page = $input['page'];
+        $url      = $input['url'];
+        $offset   = $input['offset'];
+        $limit    = $input['limit'];
+        $iterate  = $input['iterate'];
 
-        // Init scrape db
-        $scrape = Scrape::where('url', $url)->first();
 
-        if(! $scrape) {
-            $this->scrape = new Scrape();
+        echo " offfset " . $offset;
+
+        for ($i=0; $i<$iterate; $i++) {
+            $offsetFinal = $i * $offset;// 0, 10, 20, .....
+
+            // Init scrape db
+            $this->scrape = Scrape::where('url', $url)->first();
+
+            if (! $this->scrape) {
+                $this->scrape = new Scrape();
+
+                $this->scrape->offset = $offsetFinal;
+            } else if (($this->scrape->offset != $offsetFinal) && ($this->scrape->offset < $offsetFinal)) {
+                $this->scrape->offset = $offsetFinal;
+                $this->scrape->count = 0;
+            }
+
+
+
+            echo "\n Offset: " . $this->scrape->offset;
+
+
+            $this->scrape->url = $url;
+            $this->scrape->limit = $limit;
+
+            $urlFinal = $url . '&start=' . $this->scrape->offset;
+
+            echo "\n Url Final: " . $urlFinal;
+
+
+            $crawler = Goutte::request('GET', $urlFinal);
+
+            $this->getParentListing($crawler);
         }
 
-        // Init record db
-        $this->record = new Record();
-
-
-        // Init crawler
-        $crawler = Goutte::request('GET', $url);
-
-        $this->scrape->url  = $url;
-        $this->scrape->page = $page;
-
         // Execute Crawler
-        $this->getListingDetail('http://127.0.0.1:8000/sample');
+        // $this->getListingDetail('http://127.0.0.1:8000/sample');
 
         // $this->getListingDetail('https://www.yelp.com//biz/royal-realty-honolulu?osq=Property+Management');
         // $this->getListingDetailAttribute( );
         // $this->sampleNode( );
-        // $this->getParentListing( $crawler );
+    }
+
+    protected function getParentListing($crawler) {
+        $data = [];
+
+        $crawler->filter('.alternate__373c0__1uacp .link-size--inherit__373c0__2JXk5')->each(function ($node, $i) use ($crawler, $data) {
+            if($i > $this->scrape->count) {
+                $limit = $this->scrape->limit;
+                $offset = $this->scrape->offset;
+
+
+                // Init record db
+                $this->record = new Record();
+
+                $this->scrape->count = $i;
+
+                $title = $node->text('no name');
+
+                $link = 'https://www.yelp.com' . $node->attr('href');
+
+
+                dump("\n counter: $i limit:  $limit offset: $offset ");
+                dump(" address " . $title);
+                dump(" address " . $link);
+
+                $this->record->name_of_business = $title;
+                $this->record->yelp_listing_url = $link;
+
+                $this->getListingDetail($link);
+            }
+
+//            if($i == 3) {
+//                exit;
+//            }
+        });
     }
 
     protected function getListingDetailAttribute($html=null) {
         $crawler = new Crawler($html);
 
-        $streetAddress = $crawler->filterXPath('//strong[contains(@class, "street-address")]')->text();
-        $address = $crawler->filterXPath('//address')->text();
-        $neighborhood = $crawler->filterXPath('//span[contains(@class, "neighborhood-str-list")]')->text();
-        $phoneNumber = $crawler->filterXPath('//span[contains(@class, "biz-phone")]')->text();
-        $website = $crawler->filterXPath('//a[contains(@rel, "noopener")]')->text();
+        $streetAddress = $crawler->filterXPath('//strong[contains(@class, "street-address")]')->text('');
+        $address = $crawler->filterXPath('//address')->text('');
+        $neighborhood = $crawler->filterXPath('//span[contains(@class, "neighborhood-str-list")]')->text('');
+        $phoneNumber = $crawler->filterXPath('//span[contains(@class, "biz-phone")]')->text('');
+        $website = $crawler->filterXPath('//a[contains(@rel, "noopener")]')->text('');
 
         dump("DETAIL:");
-        dump($streetAddress);
-        dump($address);
-        dump($neighborhood);
+        dump("Street Address: " . $streetAddress);
+        dump("Address: " . $address);
+        dump("Neighborhood: " . $neighborhood);
 
         dump($phoneNumber);
         dump($website);
@@ -86,34 +141,13 @@ class ScrapeController extends Controller
         $crawler = Goutte::request('GET', $url);
 
         $crawler->filterXPath('//div[contains(@class, "mapbox-text")]')->each(function ($node) use ($crawler) {
-            $this->getListingDetailAttribute($node->html());
+            $this->getListingDetailAttribute($node->html('no detail'));
         });
 
         $this->findKeywords($crawler);
 
         $this->record->save();
         $this->scrape->save();
-    }
-
-    protected function getParentListing($crawler) {
-        $data = [];
-
-        $crawler->filter('.alternate__373c0__1uacp .link-size--inherit__373c0__2JXk5')->each(function ($node, $i) use ($crawler, $data) {
-            $this->scrape->count = $i;
-
-            $title = $node->text();
-
-            $link = 'https://www.yelp.com' . $node->attr('href');
-
-            dump(" number: $i");
-            dump(" address " . $title);
-            dump(" address " . $link);
-
-            $this->record->name_of_business = $title;
-            $this->record->yelp_listing_url = $link;
-
-            $this->getListingDetail($link);
-        });
     }
 
     protected function findKeywords($crawler) {

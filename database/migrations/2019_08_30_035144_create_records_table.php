@@ -19,7 +19,7 @@ class CreateRecordsTable extends Migration
             $table->string('city_name', 255)->nullable();
             $table->string('name_of_business', 255)->nullable();
             $table->string('phone', 50)->nullable();
-            $table->string('yelp_listing_url', 255)->nullable();
+            $table->text('yelp_listing_url')->nullable();
             $table->string('website', 100)->nullable();
             $table->string('keyword', 50)->nullable();
 

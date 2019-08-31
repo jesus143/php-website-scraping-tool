@@ -14,27 +14,27 @@ class Record extends Model
 
     public function setNameOfBusinessAttribute($value)
     {
-        $this->attributes['name_of_business'] = $this->cleanUp($value);;
+        $this->attributes['name_of_business'] = $this->cleanUp($value);
     }
 
     public function setPhoneAttribute($value)
     {
-        $this->attributes['phone'] = $this->cleanUp($value);;
+        $this->attributes['phone'] = $this->cleanUp($value);
     }
 
     public function setYelpListingUrlAttribute($value)
     {
-        $this->attributes['yelp_listing_url'] = $this->cleanUp($value);;
+        $this->attributes['yelp_listing_url'] = $value;
     }
 
     public function setWebsiteAttribute($value)
     {
-        $this->attributes['website'] = $this->cleanUp($value);;
+        $this->attributes['website'] =  $value;
     }
 
     public function setKeywordAttribute($value)
     {
-        $this->attributes['keyword'] = $this->cleanUp($value);;
+        $this->attributes['keyword'] = $this->cleanUp($value);
     }
 
     private function cleanUp($value) {

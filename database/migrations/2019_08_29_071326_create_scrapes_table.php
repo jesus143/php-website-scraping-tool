@@ -18,7 +18,9 @@ class CreateScrapesTable extends Migration
 
             $table->string('url', 255)->nullable();
             $table->integer('count')->default(0);
-            $table->integer('page')->default(1);
+
+            $table->integer('limit')->default(10);
+            $table->integer('offset')->default(0);
 
 
             $table->timestamps();
