@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4fe78d-2b50-4919-a9c7-cddd39e2900a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e42da80a-4406-45e3-a7e2-4aab2b7f5670.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e42da80a-4406-45e3-a7e2-4aab2b7f5670.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" afterPath="$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Record.php" afterPath="$PROJECT_DIR$/app/Record.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071135_create_scrapings_table.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_30_035144_create_records_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_08_30_035144_create_records_table.php" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +66,7 @@
             <entry file="file://$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="728">
-                  <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="54" />
+                  <caret line="52" column="59" lean-forward="false" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
                   <folding>
                     <element signature="e#40#82#0#PHP" expanded="true" />
                   </folding>
@@ -87,51 +81,14 @@
           <file leaf-file-name="ScrapeController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="72" column="2" lean-forward="false" selection-start-line="72" selection-start-column="2" selection-end-line="72" selection-end-column="2" />
+                <state relative-caret-position="462">
+                  <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
                   <folding>
                     <element signature="e#40#81#0#PHP" expanded="true" />
-                    <element signature="e#4485#5483#0#PHP" expanded="false" />
-                    <element signature="e#5489#5550#0#PHP" expanded="false" />
-                    <element signature="e#5556#6101#0#PHP" expanded="false" />
-                    <element signature="e#6107#10623#0#PHP" expanded="false" />
-                    <marker date="1567262201844" expanded="true" signature="5623:5849" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="5659:5833" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6193:10589" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6234:10550" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6298:7727" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6348:6374" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6442:6546" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6480:6538" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6689:7003" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6735:6761" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6833:6937" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="6871:6929" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7088:7680" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7168:7301" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7360:7505" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7591:7627" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7774:8247" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7828:7854" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7897:8000" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="7935:7992" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8157:8200" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8293:9041" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8347:8373" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8424:8535" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8462:8527" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="8599:8994" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9106:9950" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9156:9182" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9226:9330" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9264:9322" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9423:9902" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="9596:9853" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="10015:10508" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="10065:10462" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="10119:10145" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="10189:10293" ph="..." />
-                    <marker date="1567262201844" expanded="true" signature="10227:10285" ph="..." />
+                    <element signature="e#4497#5495#0#PHP" expanded="false" />
+                    <element signature="e#5501#5562#0#PHP" expanded="false" />
+                    <element signature="e#5568#6113#0#PHP" expanded="false" />
+                    <element signature="e#6119#10635#0#PHP" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -139,6 +96,15 @@
           </file>
           <file leaf-file-name="records" pinned="false" current-in-tab="false">
             <entry file="das://table:/30a51bb3/e42da80a-4406-45e3-a7e2-4aab2b7f5670/client_scraping.records">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scrapes" pinned="false" current-in-tab="false">
+            <entry file="das://table:/30a51bb3/e42da80a-4406-45e3-a7e2-4aab2b7f5670/client_scraping.scrapes">
               <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
                 <state>
                   <filtering enabled="true" />
@@ -445,12 +411,12 @@
       <workItem from="1567133593767" duration="7797000" />
       <workItem from="1567202155523" duration="781000" />
       <workItem from="1567231549854" duration="11635000" />
-      <workItem from="1567244465927" duration="8292000" />
+      <workItem from="1567244465927" duration="9575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32147000" />
+    <option name="totallyTimeSpent" value="33430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-210" width="1936" height="1066" extended-state="6" />
@@ -756,20 +722,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="52" column="59" lean-forward="false" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+          <folding>
+            <element signature="e#40#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://table:/30a51bb3/e42da80a-4406-45e3-a7e2-4aab2b7f5670/client_scraping.scrapes">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/ScrapeCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="54" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,51 +748,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="72" column="2" lean-forward="false" selection-start-line="72" selection-start-column="2" selection-end-line="72" selection-end-column="2" />
+        <state relative-caret-position="462">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#40#81#0#PHP" expanded="true" />
-            <element signature="e#4485#5483#0#PHP" expanded="false" />
-            <element signature="e#5489#5550#0#PHP" expanded="false" />
-            <element signature="e#5556#6101#0#PHP" expanded="false" />
-            <element signature="e#6107#10623#0#PHP" expanded="false" />
-            <marker date="1567262201844" expanded="true" signature="5623:5849" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="5659:5833" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6193:10589" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6234:10550" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6298:7727" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6348:6374" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6442:6546" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6480:6538" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6689:7003" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6735:6761" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6833:6937" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="6871:6929" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7088:7680" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7168:7301" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7360:7505" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7591:7627" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7774:8247" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7828:7854" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7897:8000" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="7935:7992" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8157:8200" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8293:9041" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8347:8373" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8424:8535" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8462:8527" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="8599:8994" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9106:9950" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9156:9182" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9226:9330" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9264:9322" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9423:9902" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="9596:9853" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="10015:10508" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="10065:10462" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="10119:10145" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="10189:10293" ph="..." />
-            <marker date="1567262201844" expanded="true" signature="10227:10285" ph="..." />
+            <element signature="e#4497#5495#0#PHP" expanded="false" />
+            <element signature="e#5501#5562#0#PHP" expanded="false" />
+            <element signature="e#5568#6113#0#PHP" expanded="false" />
+            <element signature="e#6119#10635#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

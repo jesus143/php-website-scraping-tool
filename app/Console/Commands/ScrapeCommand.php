@@ -50,7 +50,7 @@ class ScrapeCommand extends Command
             'url'     => $url,
             'offset'  => (isset($offset))  ?  $offset : 10,
             'limit'   => (isset($limit))   ?  $limit : 10, // do nothing for now
-            'iterate' => (isset($iterate)) ?  $iterate : 10
+            'iterate' => (isset($iterate)) ?  $iterate : 30
         ]);
 
         $scrape->store($request);

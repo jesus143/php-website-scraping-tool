@@ -19,7 +19,7 @@ use App\Record;
  */
 class ScrapeController extends Controller
 {
-    protected $record, $scrape;
+    protected $record, $scrape, $parentUrl='https://www.yelp.com';
 
     public function index(ScrapeIndexRequest $request)
     {
@@ -53,9 +53,9 @@ class ScrapeController extends Controller
                 $this->scrape->count = 0;
             }
 
+            $i = $this->scrape->offset / $limit;
 
-
-            echo "\n Offset: " . $this->scrape->offset;
+            echo "\n Loop: $i Offset: " . $this->scrape->offset;
 
 
             $this->scrape->url = $url;
@@ -65,7 +65,6 @@ class ScrapeController extends Controller
 
             echo "\n Url Final: " . $urlFinal;
 
-
             $crawler = Goutte::request('GET', $urlFinal);
 
             $this->getParentListing($crawler);
@@ -73,7 +72,6 @@ class ScrapeController extends Controller
 
         // Execute Crawler
         // $this->getListingDetail('http://127.0.0.1:8000/sample');
-
         // $this->getListingDetail('https://www.yelp.com//biz/royal-realty-honolulu?osq=Property+Management');
         // $this->getListingDetailAttribute( );
         // $this->sampleNode( );
@@ -95,8 +93,7 @@ class ScrapeController extends Controller
 
                 $title = $node->text('no name');
 
-                $link = 'https://www.yelp.com' . $node->attr('href');
-
+                $link = $this->parentUrl . $node->attr('href');
 
                 dump("\n counter: $i limit:  $limit offset: $offset ");
                 dump(" address " . $title);
@@ -107,10 +104,6 @@ class ScrapeController extends Controller
 
                 $this->getListingDetail($link);
             }
-
-//            if($i == 3) {
-//                exit;
-//            }
         });
     }
 
