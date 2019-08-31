@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac4fe78d-2b50-4919-a9c7-cddd39e2900a" name="Default" comment="" />
+    <list default="true" id="ac4fe78d-2b50-4919-a9c7-cddd39e2900a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Http/Repositories/RecordRepository.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Record.php" afterPath="$PROJECT_DIR$/app/Record.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ScrapeTest.php" afterPath="$PROJECT_DIR$/tests/Feature/ScrapeTest.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +50,117 @@
         <item name="client_scraping@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="client_scraping: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="records: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="scrapes: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="client_scraping@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="client_scraping: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="scrapings: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="RecordController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RecordController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrapeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+              <folding>
+                <element signature="e#40#81#0#PHP" expanded="true" />
+                <element signature="e#471#571#0#PHP" expanded="false" />
+                <element signature="e#1452#2360#0#PHP" expanded="false" />
+                <element signature="e#3398#4396#0#PHP" expanded="false" />
+                <element signature="e#4402#4463#0#PHP" expanded="false" />
+                <element signature="e#4469#5014#0#PHP" expanded="false" />
+                <element signature="e#5020#9536#0#PHP" expanded="false" />
+                <marker date="1567245701148" expanded="true" signature="4536:4762" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="4572:4746" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5106:9502" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5147:9463" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5211:6640" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5261:5287" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5355:5459" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5393:5451" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5602:5916" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5648:5674" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5746:5850" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="5784:5842" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6001:6593" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6081:6214" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6273:6418" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6504:6540" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6687:7160" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6741:6767" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6810:6913" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="6848:6905" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7070:7113" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7206:7954" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7260:7286" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7337:7448" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7375:7440" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="7512:7907" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8019:8863" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8069:8095" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8139:8243" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8177:8235" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8336:8815" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8509:8766" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8928:9421" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="8978:9375" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="9032:9058" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="9102:9206" ph="..." />
+                <marker date="1567245701148" expanded="true" signature="9140:9198" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Repositories/RecordRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrapeTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/ScrapeTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#33#48#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="records" pinned="false" current-in-tab="true">
+        <entry file="das://table:/30a51bb3/e42da80a-4406-45e3-a7e2-4aab2b7f5670/client_scraping.records">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -56,16 +168,16 @@
       <find>lemon--a__373c0__IEZFH link__373c0__29943 link-color--blue-dark__373c0__1mhJo link-size--inherit__373c0__2JXk5</find>
       <find>alternate__373c0__1uacp</find>
       <find>biz-phone</find>
-      <find>getParentListing</find>
       <find>vacation</find>
       <find>getListingDetailAttribute</find>
       <find>name_of_business</find>
-      <find>getListingDetail</find>
       <find>strip</find>
       <find>neighborhoo</find>
       <find>airbnd</find>
       <find>,</find>
       <find>happier</find>
+      <find>getParentListing</find>
+      <find>getListingDetail</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,10 +196,12 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/todo" />
-        <option value="$PROJECT_DIR$/app/Record.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ScrapeTest.php" />
         <option value="$PROJECT_DIR$/resources/views/sample.blade.php" />
+        <option value="$PROJECT_DIR$/app/Record.php" />
+        <option value="$PROJECT_DIR$/app/Http/Repositories/RecordRepository.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ScrapeTest.php" />
       </list>
     </option>
   </component>
@@ -228,54 +342,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php-website-scraping-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-website-scraping-tool" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php-website-scraping-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-website-scraping-tool" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php-website-scraping-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-website-scraping-tool" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php-website-scraping-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-website-scraping-tool" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Feature" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php-website-scraping-tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-website-scraping-tool" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -320,20 +416,22 @@
       <workItem from="1567133593767" duration="7797000" />
       <workItem from="1567202155523" duration="781000" />
       <workItem from="1567231549854" duration="11635000" />
-      <workItem from="1567244465927" duration="3000" />
+      <workItem from="1567244465927" duration="1307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23858000" />
+    <option name="totallyTimeSpent" value="25162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-210" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -345,7 +443,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -368,6 +465,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#48#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -375,6 +475,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#48#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -410,6 +513,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -417,13 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_29_071135_create_scrapings_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -473,6 +571,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -526,24 +625,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ScrapeTest.php">
+    <entry file="file://$PROJECT_DIR$/app/Record.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="630">
+          <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RecordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_29_071326_create_scrapes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_29_071135_create_scrapings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScrapeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        <state relative-caret-position="471">
+          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#81#0#PHP" expanded="true" />
+            <element signature="e#471#571#0#PHP" expanded="false" />
+            <element signature="e#1452#2360#0#PHP" expanded="false" />
+            <element signature="e#3398#4396#0#PHP" expanded="false" />
+            <element signature="e#4402#4463#0#PHP" expanded="false" />
+            <element signature="e#4469#5014#0#PHP" expanded="false" />
+            <element signature="e#5020#9536#0#PHP" expanded="false" />
+            <marker date="1567245701148" expanded="true" signature="4536:4762" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="4572:4746" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5106:9502" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5147:9463" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5211:6640" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5261:5287" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5355:5459" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5393:5451" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5602:5916" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5648:5674" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5746:5850" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="5784:5842" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6001:6593" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6081:6214" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6273:6418" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6504:6540" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6687:7160" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6741:6767" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6810:6913" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="6848:6905" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7070:7113" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7206:7954" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7260:7286" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7337:7448" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7375:7440" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="7512:7907" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8019:8863" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8069:8095" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8139:8243" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8177:8235" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8336:8815" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8509:8766" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8928:9421" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="8978:9375" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="9032:9058" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="9102:9206" ph="..." />
+            <marker date="1567245701148" expanded="true" signature="9140:9198" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Record.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/RecordRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="70">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ScrapeTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/30a51bb3/e42da80a-4406-45e3-a7e2-4aab2b7f5670/client_scraping.records">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

@@ -19,7 +19,7 @@ use App\Record;
  */
 class ScrapeController extends Controller
 {
-    protected $record;
+    protected $record, $scrape;
 
     public function index(ScrapeIndexRequest $request)
     {
@@ -30,12 +30,27 @@ class ScrapeController extends Controller
     {
         $input = $request->input();
 
-        $url = $input['url'];
+        $url  = $input['url'];
+        $page = $input['page'];
 
+        // Init scrape db
+        $scrape = Scrape::where('url', $url)->first();
+
+        if(! $scrape) {
+            $this->scrape = new Scrape();
+        }
+
+        // Init record db
         $this->record = new Record();
 
+
+        // Init crawler
         $crawler = Goutte::request('GET', $url);
 
+        $this->scrape->url  = $url;
+        $this->scrape->page = $page;
+
+        // Execute Crawler
         $this->getListingDetail('http://127.0.0.1:8000/sample');
 
         // $this->getListingDetail('https://www.yelp.com//biz/royal-realty-honolulu?osq=Property+Management');
@@ -77,12 +92,14 @@ class ScrapeController extends Controller
         $this->findKeywords($crawler);
 
         $this->record->save();
+        $this->scrape->save();
     }
 
     protected function getParentListing($crawler) {
         $data = [];
 
         $crawler->filter('.alternate__373c0__1uacp .link-size--inherit__373c0__2JXk5')->each(function ($node, $i) use ($crawler, $data) {
+            $this->scrape->count = $i;
 
             $title = $node->text();
 
@@ -135,10 +152,6 @@ class ScrapeController extends Controller
         return view('sample');
     }
 
-    private function save() {
-        $this->record->save();
-    }
-
     protected function sampleNode() {
         $html =  '  
         <div>
@@ -158,10 +171,6 @@ class ScrapeController extends Controller
 
         dump($content);
         dump($address);
-
-//        foreach ($crawler as $domElement) {
-//            var_dump($domElement->nodeName);
-//        }
     }
 
     protected function sampleHtml() {
@@ -264,4 +273,8 @@ class ScrapeController extends Controller
 
         return $html;
     }
+
+
+
+
 }

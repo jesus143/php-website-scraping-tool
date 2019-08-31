@@ -15,6 +15,12 @@ class CreateScrapesTable extends Migration
     {
         Schema::create('scrapes', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->string('url', 255)->nullable();
+            $table->integer('count')->default(0);
+            $table->integer('page')->default(1);
+
+
             $table->timestamps();
         });
     }

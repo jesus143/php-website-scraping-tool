@@ -42,6 +42,7 @@ class Record extends Model
         $new_string = preg_replace("/ {2,}/", " ", $new_string);
         $new_string = str_replace(' , ', ', ', $new_string);
         $new_string = trim($new_string, ',');
+        $new_string = trim($new_string, ' ');
 
         return $new_string;
     }
