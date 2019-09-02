@@ -37,6 +37,7 @@ class ScrapeController extends Controller
 
 
         echo " offfset " . $offset;
+        echo " Main Url " . $url;
 
         for ($i=0; $i<$iterate; $i++) {
             $offsetFinal = $i * $offset;// 0, 10, 20, .....
@@ -56,7 +57,6 @@ class ScrapeController extends Controller
             $i = $this->scrape->offset / $limit;
 
             echo "\n Loop: $i Offset: " . $this->scrape->offset;
-
 
             $this->scrape->url = $url;
             $this->scrape->limit = $limit;
@@ -82,9 +82,8 @@ class ScrapeController extends Controller
 
         $crawler->filter('.alternate__373c0__1uacp .link-size--inherit__373c0__2JXk5')->each(function ($node, $i) use ($crawler, $data) {
             if($i > $this->scrape->count) {
-                $limit = $this->scrape->limit;
+                $limit  = $this->scrape->limit;
                 $offset = $this->scrape->offset;
-
 
                 // Init record db
                 $this->record = new Record();

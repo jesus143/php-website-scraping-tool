@@ -44,7 +44,8 @@ class ScrapeCommand extends Command
         $iterate = $this->argument('iterate');
         $offset  = $this->argument('offset');
 
-        $this->info('DURL ' . $url);
+
+        $this->info('SCRAPE THIS URL  ' . $url);
 
         $request = \Illuminate\Support\Facades\Request::merge([
             'url'     => $url,
